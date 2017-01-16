@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.shane.assignment4shanecoakley"
-        minSdkVersion 21
+        minSdkVersion 23
         targetSdkVersion 2
         versionCode 1
         versionName "1.0"
