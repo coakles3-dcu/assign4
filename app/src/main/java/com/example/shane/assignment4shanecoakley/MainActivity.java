@@ -52,8 +52,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        notification_1 = new NotificationCompat.Builder(this);
-        notification_1.setAutoCancel(true);
+
 
 
 
@@ -155,6 +154,7 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            startActivity(new Intent(this,Notification2.class));
             return true;
         }
         else if(id ==R.id.notification){
