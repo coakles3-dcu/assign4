@@ -1,11 +1,14 @@
 package com.example.shane.assignment4shanecoakley;
 
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -22,6 +25,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    NotificationCompat.Builder notification_1;
+    private static final int uniqueID = 12345;
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -45,6 +51,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        notification_1 = new NotificationCompat.Builder(this);
+        notification_1.setAutoCancel(true);
 
 
 
@@ -115,6 +124,24 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+/**
+    public void first_notification(View view){
+
+        notification_1.setSmallIcon(R.mipmap.ic_launcher);
+        notification_1.setTicker("Notification 1 !!");
+        notification_1.setWhen(System.currentTimeMillis());
+        notification_1.setContentTitle("Restaurant Notification");
+        notification_1.setContentText("Notification: Save a date in your Diary");
+
+        Intent intent = new Intent(this,MainActivity.class);
+        PendingIntent pendingIntent= PendingIntent.getActivity(this,0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
+        notification_1.setContentIntent(pendingIntent);
+
+        NotificationManager nm =(NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        nm.notify(uniqueID,notification_1.build());
+
+
+    } **/
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -128,6 +155,10 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            return true;
+        }
+        else if(id ==R.id.notification){
+           startActivity(new Intent(this,Notification1.class));
             return true;
         }
 

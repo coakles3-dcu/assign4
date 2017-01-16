@@ -16,8 +16,10 @@
 <string name="mushrooms">Mushrooms</string>
 <string name="toppings">TOPPINGS</string>
 <string name="quantity">QUANTITY</string>
+    <string name="notification">notification</string>
 
-<string-array name="ui_number_entries">
+
+    <string-array name="ui_number_entries">
 <item>1</item>
 <item>2</item>
 <item>3</item>
