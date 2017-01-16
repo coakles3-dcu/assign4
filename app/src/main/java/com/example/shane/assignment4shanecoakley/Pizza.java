@@ -2,6 +2,7 @@ package com.example.shane.assignment4shanecoakley;
 
 /**
  * Created by shane on 16/01/2017.
+ * Taken from answer to assignment 3 from Colette Kirwan
  */
 public class Pizza
 {

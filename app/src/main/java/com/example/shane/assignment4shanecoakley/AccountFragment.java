@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.preference.EditTextPreference;
 import android.support.v7.preference.Preference;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v7.preference.PreferenceFragmentCompat;
@@ -76,5 +77,6 @@ public  class AccountFragment extends PreferenceFragmentCompat implements Shared
 
         }
     }
+
 
 }

@@ -23,6 +23,7 @@
         <activity android:name=".Notification1"></activity>
         <activity android:name=".PizzaActivity"></activity>
         <activity android:name=".Notification2"></activity>
+        <activity android:name=".Notification3"></activity>
     </application>
 
 </manifest>

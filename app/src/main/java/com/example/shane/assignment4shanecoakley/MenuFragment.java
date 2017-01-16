@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.NavUtils;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,8 +20,9 @@ import java.util.ArrayList;
 
 
 /**
- * A placeholder fragment containing a simple view.
+ * Activity to inflate Menu Fragment
  */
+
 public class MenuFragment extends Fragment {
 
 
@@ -30,9 +32,7 @@ public class MenuFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.menutab2, container, false);
 
 
-        // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //setContentView(R.layout.activity_pizza_menu);
         final ArrayList<Pizza> pizzas = new ArrayList<Pizza>();
 
 
@@ -58,20 +58,28 @@ public class MenuFragment extends Fragment {
 
         // Set a click listener to show the toast message
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
 
-                // Get the {@link Pizza} object at the given position the user clicked on . Use created array
-                Pizza word = pizzas.get(position);
-                String colourWord = getActivity().getBaseContext().getResources().getString(word.getPizzaDescId() );
-                Toast.makeText(getActivity().getApplicationContext(), colourWord, Toast.LENGTH_LONG).show();
-            }
+            /**
+             * Displays a toast message connected with the position of the screen selected
+             * @param adapterView
+             * @param view
+             * @param position
+    * @param l
+    */
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+
+        // Get the {@link Pizza} object at the given position the user clicked on . Use created array
+        Pizza word = pizzas.get(position);
+        String colourWord = getActivity().getBaseContext().getResources().getString(word.getPizzaDescId() );
+        Toast.makeText(getActivity().getApplicationContext(), colourWord, Toast.LENGTH_LONG).show();
+    }
 
 
-        });
+});
 
         return rootView;
-    }
+        }
 
     public boolean onOptionsItemSelected(MenuItem item) {
 
@@ -85,5 +93,7 @@ public class MenuFragment extends Fragment {
         return super.onOptionsItemSelected(item);
 
     }
+
+
 
 }

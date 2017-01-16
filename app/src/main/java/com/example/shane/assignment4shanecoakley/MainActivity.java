@@ -24,10 +24,14 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
+
+/**
+ * Main Activity for Assignment
+ * Taken from assignment 3 answer provided by Colette Kirwan
+ */
 public class MainActivity extends AppCompatActivity {
 
-    NotificationCompat.Builder notification_1;
-    private static final int uniqueID = 12345;
+
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -85,6 +89,12 @@ public class MainActivity extends AppCompatActivity {
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
+
+
+            /**
+             * Launches Email function when button is selected
+             * @param view
+             */
             @Override
             public void onClick(View view) {
 
@@ -117,31 +127,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    /**
+     * Once the app is launched the main menu is launched
+     * @param menu
+     * @return
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
+
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
-/**
-    public void first_notification(View view){
 
-        notification_1.setSmallIcon(R.mipmap.ic_launcher);
-        notification_1.setTicker("Notification 1 !!");
-        notification_1.setWhen(System.currentTimeMillis());
-        notification_1.setContentTitle("Restaurant Notification");
-        notification_1.setContentText("Notification: Save a date in your Diary");
-
-        Intent intent = new Intent(this,MainActivity.class);
-        PendingIntent pendingIntent= PendingIntent.getActivity(this,0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
-        notification_1.setContentIntent(pendingIntent);
-
-        NotificationManager nm =(NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        nm.notify(uniqueID,notification_1.build());
-
-
-    } **/
-
+    /**
+     * Handles items selected from the action bar
+     * @param item
+     * @return
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -162,6 +165,11 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
 
+
+       /** else if(id ==R.id.share){
+            startActivity(new Intent(this,Notification3.class));
+            return true;
+        }**/
         return super.onOptionsItemSelected(item);
     }
 

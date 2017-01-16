@@ -16,7 +16,11 @@ import java.util.ArrayList;
 
 /**
  * Adapter class to display different types of pizzas
+ *
+ * Created by shane on 16/01/2017.
+ * Taken from answer to assignment 3 from Colette Kirwan
  */
+
 public class PizzaAdapter extends ArrayAdapter<Pizza>
 {
 

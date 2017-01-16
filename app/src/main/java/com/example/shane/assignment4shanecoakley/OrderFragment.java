@@ -7,6 +7,9 @@ package com.example.shane.assignment4shanecoakley;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -34,6 +37,10 @@ import android.widget.Toast;
 
 import java.text.NumberFormat;
 
+/**
+ * Activity to inflate Order Fragment
+ * Main body taken from assignment 3 answer provided by Colette Kirwan
+ */
 
 public class OrderFragment extends Fragment implements CompoundButton.OnCheckedChangeListener {
 
@@ -47,8 +54,13 @@ public class OrderFragment extends Fragment implements CompoundButton.OnCheckedC
     CheckBox checkBox1, checkBox2, checkBox3, checkBox4 ;
 
 
-
-
+    /**
+     * Layout for the Order tab is displayed
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -61,6 +73,12 @@ public class OrderFragment extends Fragment implements CompoundButton.OnCheckedC
         checkBox1.setChecked(false);
 
         checkBox1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            /**
+             * if a checkbox is selectedthe value associated with that checkbox is added to a string
+             * @param box
+             * @param isChecked
+             */
             @Override
             public void onCheckedChanged(CompoundButton box, boolean isChecked) {
 
@@ -90,6 +108,13 @@ public class OrderFragment extends Fragment implements CompoundButton.OnCheckedC
         checkBox2.setChecked(false);
 
         checkBox2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+
+            /**
+             * if a checkbox is selectedthe value associated with that checkbox is added to a string
+             * @param box
+             * @param isChecked
+             */
             @Override
             public void onCheckedChanged(CompoundButton box, boolean isChecked) {
 
@@ -114,6 +139,13 @@ public class OrderFragment extends Fragment implements CompoundButton.OnCheckedC
         checkBox3.setChecked(false);
 
         checkBox3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            /**
+             * if a checkbox is selectedthe value associated with that checkbox is added to a string
+             * @param box
+             * @param isChecked
+             */
+
             @Override
             public void onCheckedChanged(CompoundButton box, boolean isChecked) {
                 {
@@ -137,6 +169,12 @@ public class OrderFragment extends Fragment implements CompoundButton.OnCheckedC
         checkBox4.setChecked(false);
 
         checkBox4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            /**
+             * if a checkbox is selectedthe value associated with that checkbox is added to a string
+             * @param box
+             * @param isChecked
+             */
+
             @Override
             public void onCheckedChanged(CompoundButton box, boolean isChecked) {
 
@@ -169,6 +207,12 @@ public class OrderFragment extends Fragment implements CompoundButton.OnCheckedC
 
         summary= (Button)rootView.findViewById(R.id.summary);
         summary.setOnClickListener(new View.OnClickListener() {
+
+            /**
+             * Once selected a summary of all checkboxes is displayed
+             * @param v
+             */
+
             @Override
             public void onClick(View v) {
                 Summary(v);
@@ -230,6 +274,11 @@ public class OrderFragment extends Fragment implements CompoundButton.OnCheckedC
         mtextView.setText(str.toString().trim());
     }
 
+    /**
+     * customers order is submitted
+     * @param view
+     */
+
     public void submitOrder(View view) {
 
         //incase of caching
@@ -249,6 +298,11 @@ public class OrderFragment extends Fragment implements CompoundButton.OnCheckedC
         }
     }
 
+    /**
+     * calculate the price of the pizza
+     * @param toppings
+     * @return
+     */
     private double calculatePrice( String toppings) {
         // First calculate the price of pizza
         double basePrice = 10.0;
@@ -277,11 +331,8 @@ public class OrderFragment extends Fragment implements CompoundButton.OnCheckedC
         return basePrice * mQuantity;
     }
 
-    /**
-     * Create summary of the order.
-     *
 
-     */
+
 
     private String createOrderSummary( ) {
 
@@ -306,4 +357,7 @@ public class OrderFragment extends Fragment implements CompoundButton.OnCheckedC
 
         Toast.makeText(getActivity().getApplicationContext(), createOrderSummary(), Toast.LENGTH_LONG).show();
     }
+
+
+
 }
