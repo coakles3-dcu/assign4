@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Layout for a single list item -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/hawaiian"
+        android:adjustViewBounds="true"
+        android:maxWidth="65dp"
+        android:maxHeight="120dp"
+        android:scaleType="fitCenter"
+        android:id="@+id/image"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp" />
+
+
+    <RelativeLayout
+        android:id="@+id/text_container"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/pizzaName_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Large Text"
+            android:layout_alignParentEnd="true"/>
+        <!--android:layout_alignTop="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView"
+        />-->
+
+        <TextView
+            android:id="@+id/pizzaDesc_text_view"
+            android:layout_alignParentEnd="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:layout_alignEnd="@+id/pizzaName_text_view"
+            android:layout_alignStart="@+id/pizzaName_text_view"
+            android:layout_below="@+id/pizzaName_text_view"
+            />
+    </RelativeLayout>
+</LinearLayout>

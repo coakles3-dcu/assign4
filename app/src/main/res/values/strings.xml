@@ -1,0 +1,60 @@
+<resources>
+<string name="app_name">Assignment 4 Shane Coakley</string>
+<string name="action_settings">Settings</string>
+<string name="section_format">Hello World from section: %1$d</string>
+<string name="welcome">WELCOME TO DCU\'S PIZZA RESTAURANT</string>
+<string name="opening_time">Opening Times</string>
+<string name="time">Mon-Sat 10:30am-10:30pm</string>
+
+
+<string name="summary">SUMMARY</string>
+<string name="order">ORDER</string>
+<string name="name">Enter your name</string>
+<string name="Toppings_summary">TOPPINGS SUMMARY</string>
+<string name="extracheese">Extra Cheese</string>
+<string name="onions">Onions</string>
+<string name="mushrooms">Mushrooms</string>
+<string name="toppings">TOPPINGS</string>
+<string name="quantity">QUANTITY</string>
+
+<string-array name="ui_number_entries">
+<item>1</item>
+<item>2</item>
+<item>3</item>
+<item>4</item>
+<item>5</item>
+<item>6</item>
+<item>7</item>
+<item>8</item>
+<item>9</item>
+<item>10</item>
+</string-array>
+
+<string name="pizza1">Hawaiian</string>
+<string name="pizza2">Margherita</string>
+<string name="pizza3">Pepperoni</string>
+<string name="pizza4">Spinach</string>
+<string name="pizza5">Meat Lovers</string>
+<string name="pizza6">Mushroom</string>
+<string name="pizza7">Vegatrian</string>
+<string name="pizza8">Fiery Hawaiian</string>
+<string name="example_description1">Sauce, Cheese, Pineapple</string>
+<string name="example_description2">Sauce, Cheese</string>
+<string name="example_description3">Sauce, Cheese, Pepperoni</string>
+<string name="example_description4">Sauce, Cheese, Spinach</string>
+<string name="example_description5">Sauce, Cheese,Ham, Pepperoni, Sausage</string>
+<string name="example_description6">Sauce, Cheese, Mushroom</string>
+<string name="example_description7">Vegetables</string>
+<string name="example_description8">Sauce, Cheese, Jalapenos,Pineapple</string>
+<string name="acctab">Application Preferences</string>
+<string name="dialog_title">Change User Name</string>
+<string name="input_name">Enter Your User Name</string>
+<string name="password">Password</string>
+<string name="input_password">Enter Your Password</string>
+<string name="email">Change Email Address</string>
+<string name="input_email">Enter Your Email Address Here</string>
+<string name="name_sum">Enter Your Name Here</string>
+<string name="email_sum">Enter Your Email Address Here</string>
+
+
+    </resources>
